@@ -2,7 +2,6 @@ from flask import Flask, render_template, request, make_response, flash, redirec
 import urllib.parse as urlparse
 from urllib.parse import parse_qs
 from http import cookies
-import requests
 app = Flask(__name__)
 
 
