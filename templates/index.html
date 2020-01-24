@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="../static/css/index.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <h2>Mời các bé đăng nhập chơi</h2>
+    <div id='hint'></div>
+    
+    <form id='Login'>
+        <h2>Wellcome</h2>
+        <div class="input-group">
+        <input type="text" id="username" required>
+        <label for="username">Username</label>
+    </div>
+    
+    <div class="input-group">
+        <input type="password" id="password" required>
+        <label for="password">Password</label>
+    </div>
+        <button type="submit">Login</button>
+        <p>Don't have account <a href="#">Sign up</a></p>
+    </form>
+    {%if flag != "" %}
+    <div>ISPCLUB{ {{flag}} }</div>
+    {%endif%}
+    <script>
+        document.getElementById('Login').addEventListener('submit',(e)=>{
+            e.preventDefault();
+            document.getElementById('hint').innerHTML =`<h4>•−−− ••− ••• − ••−−•− •− −•• −− •• −• ••−−•− −•−• •− −• ••−−•− •−•• −−− −−• •• −•</h4>`
+        })
+    </script>
+</body>
+
+</html>
